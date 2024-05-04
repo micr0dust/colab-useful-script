@@ -3,8 +3,8 @@ var captchaCheckInterval = setInterval(function() {
     if (recaptchaElement) {
         let style = window.getComputedStyle(recaptchaElement);
         if (style.display !== 'none' && style.visibility !== 'hidden') {
-            notify('https://us-tuna-sounds-files.voicemod.net/9aa8cfcd-e7b3-43aa-8744-fd62fc51e2c2-1661809186196.mp3')
-            notify('https://www.myinstants.com/media/sounds/aoe2-star-wars-imperial-march-with-a-monk-choir.mp3')
+            notify('https://github.com/micr0dust/colab-useful-script/raw/main/sound/under%20attack.mp3?raw=true')
+            notify('https://github.com/micr0dust/colab-useful-script/raw/main/sound/converted.mp3?raw=true')
             clearInterval(captchaCheckInterval);
         }
     }

@@ -3,8 +3,7 @@ var popupCheckInterval = setInterval(function() {
     if (popup) {
         let style = window.getComputedStyle(popup);
         if (style.display !== 'none' && style.visibility !== 'hidden') {
-            notify('https://us-tuna-sounds-files.voicemod.net/9aa8cfcd-e7b3-43aa-8744-fd62fc51e2c2-1661809186196.mp3')
-            notify('https://www.myinstants.com/media/sounds/aoe2-star-wars-imperial-march-with-a-monk-choir.mp3')
+            notify('https://github.com/micr0dust/colab-useful-script/raw/main/sound/You%20have%20been%20defeated.mp3?raw=true')
             clearInterval(popupCheckInterval);
         }
     }
