@@ -4,6 +4,8 @@ I just made some useful script to help me train model.
 
 ## JS bookmark
 
+The code for bookmark are minified by [this website](https://www.digitalocean.com/community/tools/minify).
+
 ### reCaptcha detect and sound notify
 
 notice to relaunch bookmark after detected.
