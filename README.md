@@ -6,17 +6,9 @@ I just made some useful script to help me train model.
 
 The code for bookmark are minified by [this website](https://www.digitalocean.com/community/tools/minify).
 
-### popup and recaptcha detect (only once)
+### popup and recaptcha detect
 
-Notice to relaunch bookmark after detected.
-
-```js
-javascript:var checkInterval=setInterval((function(){let e=document.querySelector("body > colab-recaptcha-dialog"),t=document.querySelector("body > mwc-dialog");if(e){let t=window.getComputedStyle(e);"none"!==t.display&&"hidden"!==t.visibility&&(notify("under%20attack"),notify("converted"),clearInterval(checkInterval))}else if(t){let e=window.getComputedStyle(t);"none"!==e.display&&"hidden"!==e.visibility&&(notify("Requires_Skilled_Engineers"),clearInterval(checkInterval))}}),1e3);function notify(e){var t=document.createElement("audio");t.src="https://github.com/micr0dust/colab-useful-script/raw/main/sound/"+e+".mp3?raw=true",t.autoplay=!0,t.loop=!1,document.body.appendChild(t)}
-```
-
-### popup and recaptcha detect (loop)
-
-Don't need to relaunch.
+Will play the sound each 10 sec if detect the reCaptcha or popup.
 
 ```js
 javascript:var checkInterval=setInterval((function(){let e=document.querySelector("body > colab-recaptcha-dialog"),t=document.querySelector("body > mwc-dialog");if(e){let t=window.getComputedStyle(e);"none"!==t.display&&"hidden"!==t.visibility&&(notify("under%20attack"),notify("converted"))}else if(t){let e=window.getComputedStyle(t);"none"!==e.display&&"hidden"!==e.visibility&&notify("Requires_Skilled_Engineers")}}),1e4);function notify(e){var t=document.createElement("audio");t.src="https://github.com/micr0dust/colab-useful-script/raw/main/sound/"+e+".mp3?raw=true",t.autoplay=!0,t.loop=!1,document.body.appendChild(t)}
