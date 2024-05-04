@@ -11,7 +11,7 @@ The code for bookmark are minified by [this website](https://www.digitalocean.co
 notice to relaunch bookmark after detected.
 
 ```js
-javascript:var captchaCheckInterval=setInterval((function(){let e=document.querySelector("body > colab-recaptcha-dialog");if(e){let t=window.getComputedStyle(e);"none"!==t.display&&"hidden"!==t.visibility&&(notify("under%20attack"),notify("converted"),clearInterval(captchaCheckInterval))}let t=document.querySelector("body > mwc-dialog");if(t){let e=window.getComputedStyle(t);"none"!==e.display&&"hidden"!==e.visibility&&(notify("You%20have%20been%20defeated"),clearInterval(popupCheckInterval))}}),1e3);function notify(e){var t=document.createElement("audio");t.src="https://github.com/micr0dust/colab-useful-script/raw/main/sound/"+e+".mp3?raw=true",t.autoplay=!0,t.loop=!1,document.body.appendChild(t)}
+javascript:var checkInterval=setInterval((function(){let e=document.querySelector("body > colab-recaptcha-dialog"),t=document.querySelector("body > mwc-dialog");if(e){let t=window.getComputedStyle(e);"none"!==t.display&&"hidden"!==t.visibility&&(notify("under%20attack"),notify("converted"),clearInterval(checkInterval))}else if(t){let e=window.getComputedStyle(t);"none"!==e.display&&"hidden"!==e.visibility&&(notify("You%20have%20been%20defeated"),clearInterval(checkInterval))}}),1e3);function notify(e){var t=document.createElement("audio");t.src="https://github.com/micr0dust/colab-useful-script/raw/main/sound/"+e+".mp3?raw=true",t.autoplay=!0,t.loop=!1,document.body.appendChild(t)}
 ```
 
 ### try reconnect every 60 sec
