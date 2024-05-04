@@ -3,7 +3,7 @@ var popupCheckInterval = setInterval(function() {
     if (popup) {
         let style = window.getComputedStyle(popup);
         if (style.display !== 'none' && style.visibility !== 'hidden') {
-            notify('https://github.com/micr0dust/colab-useful-script/raw/main/sound/You%20have%20been%20defeated.mp3?raw=true')
+            notify('https://github.com/micr0dust/colab-useful-script/raw/main/sound/Requires_Skilled_Engineers.mp3?raw=true')
             clearInterval(popupCheckInterval);
         }
     }
