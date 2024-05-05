@@ -8,10 +8,10 @@ The code for bookmark are minified by [this website](https://www.digitalocean.co
 
 ### popup and recaptcha detect
 
-Will play the sound each 10 sec if detect the reCaptcha or popup.
+Will play the sound if detect the reCaptcha or popup.
 
 ```js
-javascript:var checkInterval=setInterval((function(){let e=document.querySelector("body > colab-recaptcha-dialog"),t=document.querySelector("body > mwc-dialog");if(e){let t=window.getComputedStyle(e);"none"!==t.display&&"hidden"!==t.visibility&&(notify("under%20attack"),notify("converted"))}else if(t){let e=window.getComputedStyle(t);"none"!==e.display&&"hidden"!==e.visibility&&notify("Requires_Skilled_Engineers")}}),1e4);function notify(e){var t=document.createElement("audio");t.src="https://github.com/micr0dust/colab-useful-script/raw/main/sound/"+e+".mp3?raw=true",t.autoplay=!0,t.loop=!1,document.body.appendChild(t)}
+javascript:var observer=new MutationObserver((function(e){e.forEach((function(e){e.addedNodes.length&&e.addedNodes.forEach((function(e){e.matches&&e.matches("colab-recaptcha-dialog")?(notify("under%20attack"),notify("converted")):e.matches&&e.matches("mwc-dialog")&&notify("Requires_Skilled_Engineers")}))}))}));function notify(e){var o=document.createElement("audio");o.src="https://github.com/micr0dust/colab-useful-script/raw/main/sound/"+e+".mp3?raw=true",o.autoplay=!0,o.loop=!1,document.body.appendChild(o)}observer.observe(document.body,{childList:!0});
 ```
 
 ### try reconnect every 60 sec
