@@ -22,7 +22,7 @@ javascript:function ConnectButton(){document.querySelector("#top-toolbar > colab
 
 ## Python
 
-### Play sound (can use after job finish)
+### Play sound (I use after job finish)
 
 Just add them to your colab and execute.
 
